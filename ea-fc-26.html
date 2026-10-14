@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EA FC 26 - cleverdea.com</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Download EA FC 26 for Android and iOS. Experience the ultimate football gameplay with high-quality graphics and online multiplayer.">
+  <meta name="keywords" content="EA FC 26, EA Sports FC, football game, mobile game, Android, iOS, download, soccer, online multiplayer">
+  <meta name="author" content="cleverdea.com">
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body { background: #141414; color: #fff; font-family: 'Montserrat', Arial, sans-serif; margin: 0;}
+    .container { max-width: 430px; margin: 0 auto; padding: 0 0 40px 0; }
+    .top-bar { display: flex; align-items: center; justify-content: space-between; padding: 18px 0 0 0;}
+    .back-btn { background: none; border: 2px solid #43e97b; color: #43e97b; font-size: 1.1em;
+      border-radius: 28px; padding: 10px 28px; cursor: pointer; font-weight: bold;
+      display: flex; align-items: center; gap: 8px; transition: background 0.18s, color 0.18s;
+      text-decoration: none;}
+    .back-btn:hover { background: #43e97b; color: #111; }
+    .menu-btn { background: none; border: none; color: #43e97b; font-size: 2em; cursor: pointer;}
+    .banner-img {
+      width: 100%;
+      max-width: 430px;
+      height: 180px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 18px;
+      margin: 18px 0 0 0;
+      display: block;
+    }
+    .game-logo {
+      width: 108px;
+      height: 108px;
+      border-radius: 22px;
+      background: #111;
+      box-shadow: 0 2px 18px #43e97b33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -56px auto 0 auto;
+      border: 3px solid #43e97b;
+      position: relative;
+      z-index: 2;
+    }
+    .game-logo img { width: 90%; height: 90%; object-fit: contain; border-radius: 16px; }
+    .game-title { text-align: center; font-size: 2em; font-weight: bold; margin: 20px 0 7px 0; color: #fff;}
+    .game-desc { text-align: center; color: #bbb; margin-bottom: 23px;}
+    .download-btn { display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 98%; max-width: 420px; margin: 15px auto 0 auto; background: linear-gradient(90deg,#43e97b,#38f9d7);
+      border: none; color: #111; font-weight: bold; font-size: 1.14em; padding: 15px 0; border-radius: 26px; margin-bottom: 8px;
+      cursor: pointer; transition: background 0.13s, color 0.13s; text-align: center; text-decoration: none;}
+    .download-btn svg { min-width: 26px; min-height: 26px; max-width: 26px; max-height: 26px;}
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 25px 0 32px 0;}
+    .info-box { background: #1e1e1e; border-radius: 16px; padding: 18px 12px; text-align: center;}
+    .info-title { color: #43e97b; font-size: 1.11em; font-weight: bold; margin-bottom: 6px;}
+    .install-section { background: #1e1e1e; border-radius: 16px; padding: 18px 14px; margin-bottom: 23px;}
+    .install-title { color: #43e97b; font-size: 1.25em; font-weight: bold; margin-bottom: 13px;}
+    .tab-bar { display: flex; gap: 10px; margin-bottom: 16px;}
+    .tab-btn { flex: 1; padding: 9px 0; background: none; border: none; font-weight: bold; font-size: 1.08em;
+      color: #43e97b; border-radius: 22px; cursor: pointer; transition: background 0.14s;}
+    .tab-btn.active { background: linear-gradient(90deg,#43e97b,#38f9d7); color: #111;}
+    .install-list { margin: 0; padding-left: 15px; color: #b8ffe7;}
+    .install-list li { margin-bottom: 9px; }
+    .feature-section { margin-top: 25px; }
+    .features-title { color: #43e97b; font-size: 1.25em; font-weight: bold; margin-bottom: 13px;}
+    .feature-list { margin:0; padding-left: 21px;}
+    .feature-list li { margin-bottom: 9px; color: #fff;}
+    .screenshots-title { color: #43e97b; font-size: 1.25em; font-weight: bold; margin-top: 32px; margin-bottom: 13px;}
+    .screenshots-row { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 7px;}
+    .screenshot-img { width: 230px; height: 130px; border-radius: 15px; object-fit: cover; background: #222;}
+    footer { margin-top: 35px; background: #141414; border-top: 1px solid #222; color: #b8ffe7; font-size: 1.09em; padding: 25px 0 10px 0;}
+    .footer-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; max-width: 900px; margin: 0 auto;}
+    @media (min-width: 600px) { .footer-grid { grid-template-columns: repeat(4,1fr); } }
+    .footer-col { margin-bottom: 13px;}
+    .footer-title { color: #43e97b; font-weight: bold; font-size: 1.13em; margin-bottom: 9px;}
+    .footer-link, .footer-link:visited { color: #b8ffe7; text-decoration: none; }
+    .footer-link:hover { text-decoration: underline; }
+    .footer-social { display: flex; gap: 13px; margin-top: 7px;}
+    .footer-social a { color: #b8ffe7; font-size: 1.5em; opacity: 0.8; transition: opacity 0.2s;}
+    .footer-social a:hover { opacity: 1;}
+    .footer-copyright { text-align: center; color: #fff; font-size: 0.99em; margin-top: 20px;}
+    .footer-copyright a { color: #43e97b; text-decoration: underline;}
+  </style>
+  
+<script>
+    function showTab(tab) {
+      document.getElementById('android-list').style.display = tab === 'android' ? 'block' : 'none';
+      document.getElementById('ios-list').style.display = tab === 'ios' ? 'block' : 'none';
+      document.getElementById('tab-android').classList.toggle('active', tab === 'android');
+      document.getElementById('tab-ios').classList.toggle('active', tab === 'ios');
+    }
+  </script>
+
+  <div class="container">
+
+    <div class="top-bar">
+      <a class="back-btn" href="index.html">&#8592; Back to Home</a>
+      <button class="menu-btn">&#9776;</button>
+    </div>
+
+    <img class="banner-img" src="https://i.postimg.cc/PxTNPk7L/ea-sports-fc-26-dovrebbe-uscire-il-prossimo-26-settembre-cover68778afd733aa.jpg" alt="EA FC 26 Banner" loading="lazy">
+
+    <div class="game-logo">
+      <img src="https://i.postimg.cc/13FzBthD/images-(36).jpg" alt="EA FC 26 Logo">
+    </div>
+
+    <div class="game-title">EA FC 26</div>
+    <div class="game-desc"></div>
+	
+
+
+    <!-- DOWNLOAD BUTTONS WITH THE LINK ADDED -->
+    <a class="download-btn" href="https://redirectapps.online/cl/i/dv8mpo" target="_blank">Download for Android</a>
+    <a class="download-btn" href="https://redirectapps.online/cl/i/dv8mpo" target="_blank">Download for iOS</a>
+
+    <div class="info-grid">
+      <div class="info-box"><div class="info-title">Size</div><div>1.2GB (Installer)<br>8GB (Post-Download Cache)</div></div>
+      <div class="info-box"><div class="info-title">Price</div><div>Free</div></div>
+      <div class="info-box"><div class="info-title">Android Compatible</div><div>Snapdragon 845+<br>4GB RAM</div></div>
+      <div class="info-box"><div class="info-title">iOS Devices Required</div><div>iPhone XS Max+<br>iPad Pro 2018+</div></div>
+    </div>
+
+    <div class="install-section">
+      <div class="install-title">Installation Guide</div>
+
+      <div class="tab-bar">
+        <button id="tab-android" class="tab-btn active" onclick="showTab('android')">Android</button>
+        <button id="tab-ios" class="tab-btn" onclick="showTab('ios')">iOS</button>
+      </div>
+
+      <ul class="install-list" id="android-list" style="display:block;">
+        <li>Download the APK file using the Android download button above</li>
+        <li>Go to Settings &gt; Security &gt; Enable "Unknown Sources"</li>
+        <li>Locate the downloaded APK file in your file manager</li>
+        <li>Tap to install and follow on-screen instructions</li>
+        <li>After installation, download the additional game cache files</li>
+        <li>Place cache files in Android/obb/ folder</li>
+        <li>Launch the game and enjoy!</li>
+      </ul>
+
+      <ul class="install-list" id="ios-list" style="display:none;">
+        <li>Download the iOS file using the iOS download button above</li>
+        <li>Open the downloaded file and follow on-screen steps</li>
+        <li>Allow installation from unknown developer if prompted</li>
+        <li>Enjoy the game on your iOS device!</li>
+      </ul>
+    </div>
+
+    <div class="feature-section">
+      <div class="features-title">Features</div>
+      <ul class="feature-list">
+        <li>Fully open world experience</li>
+        <li>High-quality graphics optimized for mobile</li>
+        <li>Ultimate football gameplay with realistic mechanics</li>
+        <li>Online multiplayer & competitive modes</li>
+      </ul>
+    </div>
+
+    <div class="screenshots-title">Screenshots</div>
+    <div class="screenshots-row">
+      <img class="screenshot-img" src="https://i.postimg.cc/63W5Bf7Z/hqdefault.jpg" alt="EA FC 26 Screenshot 1" loading="lazy">
+      <img class="screenshot-img" src="https://i.postimg.cc/2jX8fvrs/maxresdefault-(1).jpg" alt="EA FC 26 Screenshot 2" loading="lazy">
+      <img class="screenshot-img" src="https://i.postimg.cc/W4nTYq9J/ea-sports-fc-mobile-37662-7.jpg" alt="EA FC 26 Screenshot 3" loading="lazy">
+    </div>
+
+  </div>
+  
+
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-title">About Us</div>
+        <div><a class="footer-link" href="#">Our Mission</a></div>
+        <div><a class="footer-link" href="#">Team</a></div>
+        <div><a class="footer-link" href="#">Careers</a></div>
+        <div><a class="footer-link" href="#">Contact Us</a></div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Quick Links</div>
+        <div><a class="footer-link" href="#">Home</a></div>
+        <div><a class="footer-link" href="#">Popular Apps</a></div>
+        <div><a class="footer-link" href="#">New Releases</a></div>
+        <div><a class="footer-link" href="#">Categories</a></div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Legal</div>
+        <div><a class="footer-link" href="#">Privacy Policy</a></div>
+        <div><a class="footer-link" href="#">Terms of Service</a></div>
+        <div><a class="footer-link" href="#">Disclaimer</a></div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">Follow Us</div>
+        <div class="footer-social">
+          <a href="#"><svg width="25" height="25" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></a>
+          <a href="#"><svg width="25" height="25" fill="currentColor"><rect width="20" height="20" x="2" y="2" rx="5"/></svg></a>
+          <a href="#"><svg width="25" height="25" fill="currentColor"><rect width="22" height="15" x="1.5" y="5" rx="3"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      © 2025 cleverdea.com. All rights reserved. | Designed by cleverdea.com
+    </div>
+  </footer>
+
+  <script>
+    showTab('android');
+  </script>
+
+<script>
+(function(s){
+    s.dataset.zone='11240295';
+    s.src='https://nap5k.com/tag.min.js';
+})
+(
+    [document.documentElement, document.body]
+    .filter(Boolean)
+    .pop()
+    .appendChild(document.createElement('script'))
+);
+</script>
+
+</body>
+</html>
