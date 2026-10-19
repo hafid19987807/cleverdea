@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <meta name="7fe9559bb0ef9264b553e855cc5e4be8c1bff4bf" content="7fe9559bb0ef9264b553e855cc5e4be8c1bff4bf" />
+  <script>
+  (function(s){
+    s.dataset.zone='11204025';
+    s.src='https://n6wxm.com/vignette.min.js';
+  })(
+    [document.documentElement, document.body]
+      .filter(Boolean)
+      .pop()
+      .appendChild(document.createElement('script'))
+  );
+  </script>
+  <meta name="monetag" content="4e91f58ef339866596ac2ed7b3da97f9">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>cleverdea.com — Unlock Premium Games</title>
+  <meta name="description" content="Unlock and download premium modded games for mobile. Safe, tested, and high-quality mods for GTA 5, Minecraft, FIFA 22, and more." />
+  <meta name="keywords" content="mod games, premium games, mobile games, gta 5 mobile, minecraft mobile, download games" />
+  <meta name="author" content="cleverdea.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="cleverdea.com — Unlock Premium Games" />
+  <meta property="og:description" content="Download premium modded games for mobile. Safe, tested mods for top titles." />
+  <meta property="og:image" content="https://i.postimg.cc/k42pBpHc/IMG-20250513-WA0075.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cleverdea.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="https://i.postimg.cc/k42pBpHc/IMG-20250513-WA0075.jpg" type="image/png" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --primary:#43e97b;
+      --primary2:#38f9d7;
+      --bg:#141414;
+      --card:#222;
+      --accent:#1e1e1e;
+      --text:#fff;
+      --muted:#b8b8b8;
+      --star:#ffcb05;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Montserrat", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+    a{color:inherit}
+    header{
+      background:var(--accent);
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:8px;
+    }
+    .header-top{width:100%;max-width:1100px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-circle{width:46px;height:46px;border-radius:50%;overflow:hidden;background:#191a26;border:2px solid var(--primary2);display:flex;align-items:center;justify-content:center}
+    .logo-circle img{width:32px;height:32px;object-fit:cover;border-radius:50%}
+    .logo-text{font-weight:700;color:var(--primary2);font-size:1.15rem}
+    .logo-desc{color:#8ff5d1;font-size:0.95rem;margin-top:2px}
+    .menu-btn{background:none;border:none;color:var(--primary2);font-size:1.9rem;cursor:pointer}
+    .banner-img{
+      width:100vw;max-width:100%;height:110px;object-fit:cover;margin:0 -18px;border-radius:0 0 18px 18px;
+    }
+
+    main{flex:1;display:flex;flex-direction:column;align-items:center;padding:20px 18px 40px}
+    .promo-text{color:var(--primary2);font-weight:900;font-size:1.35rem;margin:14px 0;text-align:center}
+    .search-section{
+      width:100%;max-width:740px;display:flex;align-items:center;gap:10px;margin-bottom:18px;
+      justify-content:center;
+    }
+    .search-bar{
+      flex:1;max-width:420px;background:#181c1e;border-radius:10px;padding:10px 40px 10px 14px;border:none;color:#fff;font-size:1rem;
+    }
+    .search-icon{margin-left:-36px;color:var(--primary2);pointer-events:none;font-size:1.05rem}
+    .view-toggle{
+      width:40px;height:40px;border-radius:8px;border:none;background:var(--primary2);color:#111;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;
+      transition:all .15s;
+    }
+    .view-toggle.inactive{opacity:0.55;filter:grayscale(.05)}
+    .view-toggle.active{box-shadow:0 0 0 3px #38f9d733}
+
+    .games-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      width:100%;
+      max-width:820px;
+      transition:all .18s;
+    }
+    .games-grid.list-view{
+      grid-template-columns:1fr;
+      max-width:640px;
+    }
+
+    .game-card{
+      background:var(--card);
+      border-radius:14px;
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      min-height:200px;
+      transition:transform .13s,box-shadow .13s,background .13s;
+      box-shadow:0 1px 8px #0008;
+    }
+    .games-grid.list-view .game-card{flex-direction:row;min-height:92px;text-align:left;align-items:center;padding:12px;gap:14px}
+    .game-thumb{width:80px;height:80px;border-radius:14px;object-fit:cover;margin-bottom:10px;background:#111}
+    .games-grid.list-view .game-thumb{margin-bottom:0}
+    .game-title{font-weight:700;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
+    .games-grid.list-view .game-title{max-width:280px;font-size:1.05rem}
+    .stars{display:flex;gap:4px;margin:6px 0}
+    .stars svg{width:16px;height:16px;fill:var(--star)}
+    .download-link{margin-top:8px;background:transparent;border:1.5px solid var(--primary2);color:var(--primary2);padding:6px 12px;border-radius:8px;font-weight:700;text-decoration:none}
+
+    .platform-badge{
+      margin-top:6px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.35px;
+      color:#111;
+      background:linear-gradient(135deg,var(--primary),var(--primary2));
+      padding:4px 8px;
+      border-radius:999px;
+      display:inline-block;
+    }
+
+    .games-grid.list-view .download-link{margin-left:auto;margin-top:0}
+
+    .view-all-link{display:block;margin:22px auto;color:var(--primary2);font-weight:700;text-decoration:none;font-size:1.05rem}
+    .help-section{background:var(--card);border-radius:12px;padding:28px 18px;text-align:center;max-width:420px;margin:18px 0}
+    .help-btn{background:linear-gradient(135deg,var(--primary),var(--primary2));border:none;border-radius:28px;padding:12px 28px;color:#111;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+    .subscribe-section{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#111;padding:36px 16px;border-radius:12px;width:100%;max-width:820px;margin-top:18px}
+    .subscribe-form{display:flex;gap:0;max-width:460px;margin:14px auto;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 2px 12px #0003}
+    .subscribe-input{flex:1;padding:14px;border:none;outline:none;font-size:1rem}
+    .subscribe-btn{background:#111;color:var(--primary2);padding:0 24px;border:none;font-weight:800;cursor:pointer}
+
+    footer{background:var(--accent);padding:30px 18px;color:var(--muted)}
+    .footer-container{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+    @media(min-width:700px){.footer-container{flex-direction:row;justify-content:space-between}}
+    .footer-logo{display:flex;gap:10px;align-items:center}
+    .footer-desc{color:#b8ffe7;max-width:320px}
+
+    .help-float{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:var(--primary2);display:flex;align-items:center;justify-content:center;color:#111;box-shadow:0 6px 22px #38f9d744;font-size:1.5rem}
+    .help-float:focus{outline:3px solid #fff3}
+
+
+    .game-card.hidden-by-search{display:none!important}
+    .game-card.search-match{order:-1;box-shadow:0 0 0 2px var(--primary2),0 4px 18px #38f9d744}
+
+    @media (max-width:420px){
+      .logo-text{font-size:1rem}
+      .game-title{max-width:90px}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <div class="logo" aria-hidden="false">
+        <div class="logo-circle">
+          <img src="https://i.postimg.cc/k42pBpHc/IMG-20250513-WA0075.jpg" alt="cleverdea logo" loading="lazy" />
+        </div>
+        <div>
+          <div class="logo-text">cleverdea.com</div>
+          <div class="logo-desc">Unlock Premium Games</div>
+        </div>
+      </div>
+
+      <button class="menu-btn" aria-label="Open menu" title="Menu">&#9776;</button>
+    </div>
+
+    <img class="banner-img" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80" alt="Colorful game characters banner" loading="lazy" />
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h1 class="promo-text">Experience Your Favorite Games on Mobile, PC & Console!</h1>
+<div style="text-align:center;margin:16px auto;max-width:100%;overflow-x:auto;">
+  <script type="text/javascript">
+    aclib.runBanner({
+      zoneId: '11914742',
+    });
+  </script>
+</div>
+
+<div class="search-section" role="search" aria-label="Search games">
+      <input id="search-bar" class="search-bar" type="search" placeholder="Type game name..." aria-label="Search games" autocomplete="off" />
+      <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span>
+
+      <button id="gridToggle" class="view-toggle active" title="Grid view" aria-pressed="true" aria-label="Grid view">
+        <i class="fas fa-th"></i>
+      </button>
+      <button id="listToggle" class="view-toggle inactive" title="List view" aria-pressed="false" aria-label="List view">
+        <i class="fas fa-list"></i>
+      </button>
+    </div>
+
+    <!-- GAMES GRID (two columns) -->
+    <section id="games-grid" class="games-grid" aria-label="Available games">
+
+      <!-- GTA 6 Mobile -->
+<article class="game-card" data-title="GTA 6 Mobile Grand Theft Auto VI Mobile GTA VI APK Android iOS Rockstar Open World" itemscope itemtype="https://schema.org/VideoGame">
+<a href="gta-6-mobile.html" style="display:block;text-decoration:none;color:inherit">
+<img class="game-thumb" src="https://i.postimg.cc/4NmhFrys/g-t-a-6-logo-reveal-958e5df2t9bfx8ru.jpg" alt="GTA 6 Mobile cover" loading="lazy" itemprop="image"/>
+<div class="game-title" itemprop="name">GTA 6 Mobile</div></a>
+<div class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg><svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg><svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg><svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg><svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg></div>
+<a href="gta-6-mobile.html" class="download-link" itemprop="url">Download</a>
+</article>
+
+      <!-- GTA 6 — PC / Xbox / PS5 -->
+      <article class="game-card" data-title="GTA 6 PC Xbox PS5 Grand Theft Auto VI PC Xbox Series X S PlayStation 5" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="gta-6-pc-xbox-ps5.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/sxWF7qdL/1787320903475.png" alt="GTA 6 PC Xbox PS5 cover" loading="lazy" itemprop="image"/>
+          <div class="game-title" itemprop="name">GTA 6 — PC, Xbox & PS5</div>
+          <div class="platform-badge">PC • XBOX • PS5</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="gta-6-pc-xbox-ps5.html" class="download-link" itemprop="url">Download</a>
+      </article>
+
+
+      <!-- Rematch Mobile -->
+      <article class="game-card" data-title="Rematch Mobile Rematch APK Android iOS 5v5 Football Soccer Multiplayer Sports Game" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="rematch-mobile.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/15qmgDLX/images-(45).jpg" alt="Rematch Mobile cover" loading="lazy" itemprop="image" />
+          <div class="game-title" itemprop="name">Rematch Mobile</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="rematch-mobile.html" class="download-link" itemprop="url">Download</a>
+      </article>
+
+      <!-- Mecha Chameleon Mobile -->
+      <article class="game-card" data-title="Mecha Chameleon Mobile Mecha Chameleon APK Android iOS Mech Action Chameleon Robot Game" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="mecha-chameleon.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/tCGqwY81/mecha-chameleon-logo.png" alt="Mecha Chameleon Mobile cover" loading="lazy" itemprop="image" />
+          <div class="game-title" itemprop="name">Mecha Chameleon</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="mecha-chameleon.html" class="download-link" itemprop="url">Download</a>
+      </article>
+
+
+
+
+<!-- Black Myth: Wukong Mobile -->
+      <article class="game-card" data-title="Black Myth Wukong Mobile Black Myth: Wukong APK Action RPG" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="black-myth-wukong.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/vmgGvc3p/hq720-(1).jpg" alt="Black Myth Wukong Mobile cover" loading="lazy" itemprop="image" />
+          <div class="game-title" itemprop="name">Black Myth: Wukong Mobile</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="black-myth-wukong.html" class="download-link" itemprop="url">Download</a>
+      </article>
+
+      
+      <!-- Schedule I Mobile -->
+      <article class="game-card" data-title="Schedule I Mobile Schedule 1 Mobile APK Open World Crime Simulator" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="schedule-i-mobile.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/bYgB4K0R/17429732859550152.webp" alt="Schedule I Mobile cover" loading="lazy" itemprop="image" />
+          <div class="game-title" itemprop="name">Schedule I Mobile</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="schedule-i-mobile.html" class="download-link" itemprop="url">Download</a>
+      </article>
+
+<!-- GTA 5 -->
+      <article class="game-card" data-title="GTA 5" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="gta-5.html" itemprop="url" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA 5 cover" loading="lazy" itemprop="image" />
+          <div class="game-title" itemprop="name">GTA 5</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5" /></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5" /></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5" /></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5" /></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5" /></svg>
+        </div>
+        <a href="gta-5.html" class="download-link" itemprop="offers">Download</a>
+      </article>
+	  
+	 <article class="game-card" data-title="Red Dead Redemption (NETFLIX)" itemscope itemtype="https://schema.org/VideoGame">
+  <a href="red-dead.html" style="display:block;text-decoration:none;color:inherit">
+    <img class="game-thumb" src="https://i.postimg.cc/TPGSHBWg/G5q-EJAl-XUAAsj-Q.jpg" alt="Red Dead Redemption cover" loading="lazy" itemprop="image" />
+    <div class="game-title" itemprop="name">Red Dead Redemption (NETFLIX)</div>
+  </a>
+
+  <div class="stars" aria-hidden="true">
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+  </div>
+  <a href="red-dead.html" class="download-link" itemprop="url">Download</a>
+</article>
+	  
+<!-- FC27 Mobile Beta (new listing; existing index content retained) -->
+<article class="game-card" data-title="FC27 Mobile Beta EA Sports FC 27 FC 27 football soccer mobile beta Android iOS" itemscope itemtype="https://schema.org/VideoGame">
+  <a href="fc27-mobile-beta.html" style="display:block;text-decoration:none;color:inherit">
+    <img class="game-thumb" src="https://i.postimg.cc/NGpsY1Tj/9795c9fad19eece1cf87d960861ae9d3803c6cce587820abf7d9ca2272173bac-600.jpg" alt="FC27 Mobile Beta logo and game artwork" loading="lazy" itemprop="image"/>
+    <div class="game-title" itemprop="name">FC27 Mobile Beta</div>
+  </a>
+  <div class="stars" aria-hidden="true">
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+  </div>
+  <a href="fc27-mobile-beta.html" class="download-link" itemprop="url">View Game</a>
+</article>
+
+<!-- EA FC 26 -->
+<article class="game-card" data-title="EA FC 26" itemscope itemtype="https://schema.org/VideoGame">
+  <a href="ea-fc-26.html" style="display:block;text-decoration:none;color:inherit">
+    <img class="game-thumb" src="https://i.postimg.cc/K8009Zns/19ad6574090b6a71c88f0e6152ae5a668cc85882d87c51b5.jpg" alt="EA FC 26 cover" loading="lazy" />
+    <div class="game-title">EA FC 26</div>
+  </a>
+
+  <div class="stars" aria-hidden="true">
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+  </div>
+  <a href="ea-fc-26.html" class="download-link">Download</a>
+</article>
+
+      <!-- BeamNG Drive Mobile -->
+      <article class="game-card" data-title="BeamNG Drive Mobile" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="BeamNG Drive Mobile.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/k4vW236y/6404024.png" alt="BeamNG Drive Mobile cover" loading="lazy" />
+          <div class="game-title">BeamNG Drive Mobile</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="BeamNG Drive Mobile.html" class="download-link">Download</a>
+      </article>
+	  
+<!-- PES 2013 Mobile -->
+<article class="game-card" data-title="PES 2013 Mobile" itemscope itemtype="https://schema.org/VideoGame">
+  <a href="pes-2013-mobile.html" style="display:block;text-decoration:none;color:inherit">
+    <img class="game-thumb" src="https://i.postimg.cc/Sszt23xk/1eac9c6a-11d1-4ac0-a4af-2748a0e73c0e.jpg" alt="PES 2013 Mobile cover" loading="lazy" />
+    <div class="game-title">PES 2013 Mobile</div>
+  </a>
+
+  <div class="stars" aria-hidden="true">
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+    <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+  </div>
+  <a href="pes-2013-mobile.html" class="download-link">Download</a>
+</article>
+
+
+      <!-- Silksong Mobile -->
+      <article class="game-card" data-title="Silksong Mobile" itemscope itemtype="https://schema.org/VideoGame">
+        <!-- Link exactly matches the filename in your repo: "Silksong Mobile.html" -->
+        <a href="Silksong Mobile.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/tgFYRKYv/1712052649-La-date-de-sortie-de-Hollow-Knight-Silksong-semble-imminente.jpg" alt="Silksong Mobile cover" loading="lazy" />
+          <div class="game-title">Silksong Mobile</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="Silksong Mobile.html" class="download-link">Download</a>
+      </article>
+
+      <!-- Minecraft -->
+      <article class="game-card" data-title="Minecraft" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="minecraft.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/NM4yWD7R/7fc49c4adbc07dfa36156c131d4c4f7a.jpg" alt="Minecraft cover" loading="lazy" />
+          <div class="game-title">Minecraft</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="minecraft.html" class="download-link">Download</a>
+      </article>
+
+      <!-- Poppy Playtime -->
+      <article class="game-card" data-title="Poppy Playtime" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="poppy-playtime.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://staticc.sportskeeda.com/editor/2022/05/036ce-16522967444444-1920.jpg" alt="Poppy Playtime cover" loading="lazy" />
+          <div class="game-title">Poppy Playtime</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="poppy-playtime.html" class="download-link">Download</a>
+      </article>
+
+      <!-- Spider-Man -->
+      <article class="game-card" data-title="Spider-Man" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="spiderman.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.pinimg.com/originals/39/64/52/39645209f339136bf2d7d47826a6a257.jpg" alt="Spider-Man cover" loading="lazy" />
+          <div class="game-title">Spider-Man</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="spiderman.html" class="download-link">Download</a>
+      </article>
+
+      <!-- GTA San Andreas -->
+      <article class="game-card" data-title="GTA San Andreas" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="gta-san-andreas.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://www.pngmart.com/files/22/Grand-Theft-Auto-San-Andreas-Logo-PNG-Isolated-HD.png" alt="GTA San Andreas cover" loading="lazy" />
+          <div class="game-title">GTA San Andreas</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="gta-san-andreas.html" class="download-link">Download</a>
+      </article>
+
+      <!-- The Last of Us -->
+      <article class="game-card" data-title="The Last of Us" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="the-last-of-us.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/Gt39VBZL/IMG-20250615-WA0083.jpg" alt="The Last of Us cover" loading="lazy" />
+          <div class="game-title">The Last of Us</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="the-last-of-us.html" class="download-link">Download</a>
+      </article>
+
+      <!-- Rooftops & Alleys -->
+      <article class="game-card" data-title="Rooftops & Alleys" itemscope itemtype="https://schema.org/VideoGame">
+        <a href="roof-top-alleys.html" style="display:block;text-decoration:none;color:inherit">
+          <img class="game-thumb" src="https://i.postimg.cc/L6hzwkZ4/1257de996c9d625bd6d16e683576218ea55a04e4ff97982b.jpg" alt="Rooftops & Alleys cover" loading="lazy" />
+          <div class="game-title">Rooftops & Alleys</div>
+        </a>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+          <svg viewBox="0 0 20 20" style="fill:#888"><polygon points="10,2 12.5,7.5 18.5,8 13.8,12.1 15.3,18 10,14.7 4.7,18 6.2,12.1 1.5,8 7.5,7.5"/></svg>
+        </div>
+        <a href="roof-top-alleys.html" class="download-link">Download</a>
+      </article>
+    </section>
+
+    <a class="view-all-link" href="#">View All Games →</a>
+
+    <!-- Contact Section (modal triggered) -->
+    <section class="help-section" aria-labelledby="help-title">
+      <h2 id="help-title">Need Help?</h2>
+      <button id="contactOpen" class="help-btn" aria-haspopup="dialog">
+        <i class="fas fa-envelope"></i> Contact Us
+      </button>
+    </section>
+
+    <!-- Contact Modal (hidden by default) -->
+    <div id="contact-modal" role="dialog" aria-modal="true" aria-hidden="true" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;z-index:9999;padding:20px">
+      <div style="background:#1e1e1e;padding:20px;border-radius:14px;width:100%;max-width:420px;position:relative;box-shadow:0 8px 32px #0008">
+        <button id="contactClose" aria-label="Close contact form" style="position:absolute;right:14px;top:10px;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer">&times;</button>
+        <h3 style="color:var(--primary2);text-align:center;margin-top:4px">Contact Support</h3>
+        <form id="contact-form" action="mailto:support@cleverdea.com" method="POST" enctype="text/plain" style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+          <input name="Name" type="text" placeholder="Your name" required style="padding:10px;border-radius:8px;border:none;font-size:1rem" />
+          <input name="Email" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:none;font-size:1rem" />
+          <textarea name="Message" rows="5" placeholder="Your message" required style="padding:10px;border-radius:8px;border:none;font-size:1rem"></textarea>
+          <button type="submit" style="background:linear-gradient(135deg,var(--primary),var(--primary2));border:none;padding:12px;border-radius:10px;color:#111;font-weight:800;cursor:pointer">Send</button>
+        </form>
+        <p style="color:var(--muted);font-size:.9rem;text-align:center;margin-top:10px">Or email: <a href="mailto:support@cleverdea.com" style="color:var(--primary2)">support@cleverdea.com</a></p>
+      </div>
+    </div>
+
+    <!-- Subscribe -->
+    <section class="subscribe-section" aria-labelledby="subscribe-title">
+      <h3 id="subscribe-title">Stay Updated</h3>
+      <p style="margin:4px 0 12px;color:#222">Subscribe to get notified about new game releases and exclusive mods.</p>
+      <form id="subscribe-form" class="subscribe-form" aria-label="Subscribe for updates">
+        <input class="subscribe-input" type="email" placeholder="Your email address" aria-label="Email address" required />
+        <button class="subscribe-btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="footer-logo">
+          <div class="logo-circle" style="width:36px;height:36px;border-width:1.5px">
+            <img src="https://i.postimg.cc/k42pBpHc/IMG-20250513-WA0075.jpg" alt="cleverdea logo" loading="lazy" style="width:22px;height:22px"/>
+          </div>
+          <div style="font-weight:800;color:var(--primary2)">cleverdea.com</div>
+        </div>
+        <div class="footer-desc">Your premier destination for premium modded games. We provide safe, tested mods for the best gaming experience.</div>
+        <div style="display:flex;gap:12px">
+          <a href="https://facebook.com/" target="_blank" aria-label="Facebook" rel="noopener noreferrer" style="color:inherit"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener noreferrer" style="color:inherit"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" target="_blank" aria-label="Instagram" rel="noopener noreferrer" style="color:inherit"><i class="fab fa-instagram"></i></a>
+          <a href="https://discord.com/" target="_blank" aria-label="Discord" rel="noopener noreferrer" style="color:inherit"><i class="fab fa-discord"></i></a>
+          <a href="https://youtube.com/" target="_blank" aria-label="YouTube" rel="noopener noreferrer" style="color:inherit"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:28px;flex-wrap:wrap">
+        <div>
+          <h4 style="color:var(--primary2);margin:0 0 8px 0">Quick Links</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:var(--muted);line-height:1.9">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Games</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--primary2);margin:0 0 8px 0">Support</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:var(--muted);line-height:1.9">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">DMCA</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--primary2);margin:0 0 8px 0">Contact</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:var(--muted);line-height:1.9">
+            <li><a href="mailto:support@cleverdea.com">support@cleverdea.com</a></li>
+            <li><a href="https://www.cleverdea.com">www.cleverdea.com</a></li>
+            <li>123 Gaming Street, Digital City</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:#aaa;margin-top:18px;font-size:.95rem">
+      &copy; 2025 <a href="#" style="color:var(--primary2)">cleverdea.com</a>. All Rights Reserved.
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;color:#b8ffe7">
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#38f9d7" opacity="0.2"/><path d="M6 11.5l2.5 2.5 5-5" stroke="#38f9d7" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        Verified by Play Protect
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating help -->
+  <a class="help-float" href="#contactOpen" title="Help" aria-label="Help" id="helpFloat"><i class="fas fa-question"></i></a>
+
+  <!-- SCRIPTS: search + grid/list toggle + modal + subscribe demo -->
+  <script>
+    (function(){
+      const searchInput = document.getElementById('search-bar');
+      const gamesGrid = document.getElementById('games-grid');
+      const gridToggle = document.getElementById('gridToggle');
+      const listToggle = document.getElementById('listToggle');
+      const contactOpen = document.getElementById('contactOpen');
+      const contactModal = document.getElementById('contact-modal');
+      const contactClose = document.getElementById('contactClose');
+      const helpFloat = document.getElementById('helpFloat');
+      const subscribeForm = document.getElementById('subscribe-form');
+
+      if(!searchInput || !gamesGrid) return;
+
+      function normalizeText(value){
+        return (value || '')
+          .toString()
+          .toLowerCase()
+          .replace(/[-_:()]/g,' ')
+          .replace(/\s+/g,' ')
+          .trim();
+      }
+
+      function filterGames(){
+        const q = normalizeText(searchInput.value);
+        const cards = Array.from(gamesGrid.querySelectorAll('.game-card'));
+
+        cards.forEach((card, index)=>{
+          const dataTitle = card.getAttribute('data-title') || '';
+          const visibleTitle = card.querySelector('.game-title') ? card.querySelector('.game-title').textContent : '';
+          const allText = normalizeText(dataTitle + ' ' + visibleTitle + ' ' + card.textContent);
+
+          card.classList.remove('hidden-by-search','search-match');
+          card.style.order = index;
+
+          if(!q){ return; }
+
+          if(allText.includes(q)){
+            card.classList.add('search-match');
+            card.style.order = -100 + index;
+          } else {
+            card.classList.add('hidden-by-search');
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', filterGames);
+      searchInput.addEventListener('keyup', filterGames);
+      searchInput.addEventListener('change', filterGames);
+
+      function setActiveView(isList){
+        if(isList){
+          gamesGrid.classList.add('list-view');
+          listToggle.classList.remove('inactive'); listToggle.classList.add('active');
+          gridToggle.classList.remove('active'); gridToggle.classList.add('inactive');
+          listToggle.setAttribute('aria-pressed','true');
+          gridToggle.setAttribute('aria-pressed','false');
+        } else {
+          gamesGrid.classList.remove('list-view');
+          gridToggle.classList.remove('inactive'); gridToggle.classList.add('active');
+          listToggle.classList.remove('active'); listToggle.classList.add('inactive');
+          gridToggle.setAttribute('aria-pressed','true');
+          listToggle.setAttribute('aria-pressed','false');
+        }
+      }
+      setActiveView(false);
+
+      gridToggle.addEventListener('click', function(){ setActiveView(false); });
+      listToggle.addEventListener('click', function(){ setActiveView(true); });
+
+      function openModal(){
+        if(!contactModal) return;
+        contactModal.style.display = 'flex';
+        contactModal.setAttribute('aria-hidden','false');
+        const first = contactModal.querySelector('input,textarea,button');
+        if(first) first.focus();
+      }
+      function closeModal(){
+        if(!contactModal) return;
+        contactModal.style.display = 'none';
+        contactModal.setAttribute('aria-hidden','true');
+      }
+      if(contactOpen){
+        contactOpen.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+      }
+      if(contactClose){
+        contactClose.addEventListener('click', function(e){ e.preventDefault(); closeModal(); });
+      }
+      if(contactModal){
+        contactModal.addEventListener('click', function(e){
+          if(e.target === contactModal) closeModal();
+        });
+        window.addEventListener('keydown', function(e){
+          if(e.key === 'Escape') closeModal();
+        });
+      }
+      if(helpFloat){
+        helpFloat.addEventListener('click', function(e){
+          e.preventDefault();
+          openModal();
+        });
+      }
+      if(subscribeForm){
+        subscribeForm.addEventListener('submit', function(e){
+          e.preventDefault();
+          const email = subscribeForm.querySelector('input[type="email"]').value.trim();
+          if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+            alert('Please enter a valid email address.');
+            return;
+          }
+          subscribeForm.querySelector('input').value = '';
+          alert('Thanks — you are subscribed (demo). Replace this with a real subscribe endpoint to collect emails.');
+        });
+      }
+    })();
+  </script>
+
+  <script src="https://quge5.com/88/tag.min.js" data-zone="197789" async data-cfasync="false"></script>
+
+
+
+</body>
+</html>
